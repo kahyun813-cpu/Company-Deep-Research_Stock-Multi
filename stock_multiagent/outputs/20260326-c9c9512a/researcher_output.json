@@ -1,0 +1,162 @@
+{
+  "run_id": "20260326-c9c9512a",
+  "agent": "data_collector",
+  "schema_version": 2,
+  "ticker": "NVDA",
+  "company_name": "NVIDIA Corporation",
+  "report_date": "2026-03-26",
+  "payload": {
+    "financial": {
+      "revenue_latest_q": 68127000000.0,
+      "revenue_yoy_pct": 19.5,
+      "operating_income": 44299000000.0,
+      "operating_margin_pct": 65.0,
+      "diluted_eps": 1.76,
+      "eps_consensus": "Data unavailable for eps_consensus",
+      "eps_surprise_pct": "Data unavailable for eps_surprise_pct",
+      "eps_consecutive_beats": 0,
+      "eps_avg_surprise_8q": "Data unavailable for eps_avg_surprise_8q",
+      "free_cash_flow": 34904000000.0,
+      "price_to_fcf": "Data unavailable for price_to_fcf",
+      "total_debt": 11040000000.0,
+      "cash_and_equivalents": 10605000000.0,
+      "debt_to_equity": "Data unavailable for debt_to_equity",
+      "roic": "Data unavailable for roic",
+      "sources": [
+        {
+          "type": "api",
+          "tool": "yfinance",
+          "title": "NVDA Financial Statements"
+        },
+        {
+          "type": "api",
+          "tool": "Financial Modeling Prep (FMP)",
+          "title": "NVDA Key Metrics"
+        }
+      ]
+    },
+    "valuation": {
+      "pe_trailing": 36.465305,
+      "pe_forward": 0.0,
+      "pb": 27.608156,
+      "ps": 20.111408,
+      "ev_ebitda": 32.206,
+      "peg": 0.735,
+      "price_to_fcf": "Data unavailable for price_to_fcf",
+      "market_cap": 4342817226752,
+      "analyst_target_low": 140.0,
+      "analyst_target_mean": 268.22195,
+      "analyst_target_high": 380.0,
+      "buy_count": 56,
+      "hold_count": "Data unavailable for hold_count",
+      "sell_count": "Data unavailable for sell_count",
+      "forward_estimates": [],
+      "sources": [
+        {
+          "type": "api",
+          "tool": "yfinance",
+          "title": "NVDA Valuation Multiples"
+        },
+        {
+          "type": "api",
+          "tool": "yfinance",
+          "title": "NVDA Analyst Targets & Rating Changes"
+        }
+      ]
+    },
+    "events": {
+      "next_earnings_date": "Data unavailable for next_earnings_date",
+      "last_eps_surprise_pct": "Data unavailable for last_eps_surprise_pct",
+      "dividend_yield": "Data unavailable for dividend_yield",
+      "buyback_amount_last_year": "Data unavailable for buyback_amount_last_year",
+      "insider_buy_count": 0,
+      "insider_sell_count": 0,
+      "insider_dominant_activity": "Data unavailable for insider_dominant_activity",
+      "sources": [
+        {
+          "type": "api",
+          "tool": "yfinance",
+          "title": "NVDA Earnings Calendar"
+        },
+        {
+          "type": "sec",
+          "tool": "yfinance/edgar",
+          "title": "NVDA Insider Transactions (Form 4)"
+        }
+      ]
+    },
+    "news": {
+      "articles_analyzed": 0,
+      "positive_pct": "Data unavailable for positive_pct",
+      "negative_pct": "Data unavailable for negative_pct",
+      "neutral_pct": "Data unavailable for neutral_pct",
+      "top_headlines": [],
+      "analyst_upgrades_30d": 0,
+      "analyst_downgrades_30d": 0,
+      "net_rating_change": 0,
+      "rating_changes": [],
+      "sources": []
+    },
+    "sec": {
+      "form_10k_filed_date": "2026-02-25",
+      "form_10k_accession": "000104581026000021",
+      "form_10q_filed_date": "Data unavailable for form_10q_filed_date",
+      "form_10q_accession": "Data unavailable for form_10q_accession",
+      "top_risk_factors": [
+        "Examples of material information could include: financial results; significant mergers or acquisitions; major contracts; significant information regarding NVIDIA’s products and services; significant information about competition, customers, or market demand; major cybersecurity breaches, data protection or privacy incidents; key personnel changes; significant litigation; or material regulatory activity.",
+        "Unless you are expressly authorized and are performing your job duties for NVIDIA, you may not provide information to the press or the financial community regarding NVIDIA, competition, customers, market demand, or any other information that could be deemed relevant by stockholders, financial analysts, broker-dealers, or investment research firms.",
+        "If you use a third party to trade on your behalf, you are responsible for ensuring they adhere to this Policy in any activity they perform for you."
+      ],
+      "guidance_summary": "Data unavailable for guidance_summary",
+      "liquidity_commentary": "Data unavailable for liquidity_commentary",
+      "sources": [
+        {
+          "type": "sec",
+          "tool": "edgar",
+          "id": "000104581026000021",
+          "title": "NVDA 10-K filed 2026-02-25 (SEC EDGAR)"
+        }
+      ]
+    },
+    "competitors": {
+      "peers": [
+        {
+          "ticker": "AMD",
+          "company_name": "Advanced Micro Devices, Inc.",
+          "pe": 84.71924,
+          "pb": 5.6990943,
+          "operating_margin": 0.17059,
+          "revenue_growth": 0.341,
+          "ev_ebitda": 52.273
+        },
+        {
+          "ticker": "INTC",
+          "company_name": "Intel Corporation",
+          "pe": "Data unavailable for pe",
+          "pb": 2.0617025,
+          "operating_margin": 0.051409997,
+          "revenue_growth": -0.041,
+          "ev_ebitda": 20.378
+        },
+        {
+          "ticker": "QCOM",
+          "company_name": "QUALCOMM Incorporated",
+          "pe": 26.227367,
+          "pb": 6.067589,
+          "operating_margin": 0.27473,
+          "revenue_growth": 0.05,
+          "ev_ebitda": 10.322
+        }
+      ],
+      "sector_avg_pe": 55.47,
+      "sources": [
+        {
+          "type": "api",
+          "tool": "yfinance",
+          "title": "Competitor Comparison"
+        }
+      ]
+    }
+  },
+  "data_gaps": []
+}
