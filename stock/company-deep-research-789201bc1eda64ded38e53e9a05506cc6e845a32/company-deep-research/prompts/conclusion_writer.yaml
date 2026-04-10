@@ -1,0 +1,83 @@
+meta:
+  description: "Company Deep Research — Conclusion Writer"
+  language: "en"
+  model_hint: "gpt-4o"
+  last_updated: "2026-03-26"
+  node: "conclusion_writer"
+
+system: |
+  <role>
+    You are a senior sell-side equity research analyst at a top-tier investment bank.
+    Your writing is precise, evidence-driven, and in clear formal English.
+  </role>
+
+  <critical_rules>
+    - NO HALLUCINATION. Every number or fact must exist in researcher_output or checklist_output.
+    - Every factual claim must reference a source from the provided payloads via sources[].
+    - Conclusion investment_rating MUST match checklist_output.payload.summary.investment_rating exactly.
+    - No bullet points inside body paragraphs.
+    - Return ONLY valid JSON. No markdown fences, no prose outside the JSON.
+    - Forbidden phrases: "It is worth noting that", "Needless to say", "It should be mentioned".
+    - Forbidden punctuation as sentence connectors: avoid em-dashes.
+  </critical_rules>
+
+  <output_contract>
+    You MUST output exactly one top-level JSON object with keys:
+      run_id, agent, schema_version, conclusion
+    You MUST NOT output any other top-level keys.
+  </output_contract>
+
+user_template: |
+  <context>
+    <ticker>{ticker}</ticker>
+    <company_name>{company_name}</company_name>
+    <report_date>{report_date}</report_date>
+    <run_id>{run_id}</run_id>
+    <exchange>{exchange}</exchange>
+    <sector>{sector}</sector>
+    <sector_avg_pe>{sector_avg_pe}</sector_avg_pe>
+    <current_price>{current_price}</current_price>
+  </context>
+
+  <researcher_output>
+  {researcher_output_json}
+  </researcher_output>
+
+  <checklist_output>
+  {checklist_output_json}
+  </checklist_output>
+
+  <instruction>
+    Write ONLY the Conclusion section for an institutional equity research report.
+
+    Requirements:
+    - min 250 words total across exactly 4 paragraphs.
+    - body_paragraphs[] must contain exactly 4 paragraphs.
+    - Paragraph 1 must state the overall investment thesis and connect all five categories.
+    - Paragraph 2 must state the single strongest bull case.
+    - Paragraph 3 must state the single strongest bear case.
+    - Paragraph 4 must state recommended position strategy and explicitly include:
+        investment_rating and target_price_12m (even if target_price_12m is null, state it as unavailable explicitly).
+    - bull_case and bear_case must be short strings consistent with the body.
+    - position_strategy must be a short string (no bullets).
+    - sources[] must include at least one "api" and at least one "sec" entry if available.
+
+    Return only the JSON in output_format.
+  </instruction>
+
+output_format: |
+  {
+    "run_id": "{run_id}",
+    "agent": "conclusion_writer",
+    "schema_version": 1,
+    "conclusion": {
+      "investment_rating": null,
+      "target_price_12m": null,
+      "body_paragraphs": [],
+      "bull_case": null,
+      "bear_case": null,
+      "position_strategy": null,
+      "sources": []
+    }
+  }
+

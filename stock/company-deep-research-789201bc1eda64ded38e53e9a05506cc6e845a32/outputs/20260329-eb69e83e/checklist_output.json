@@ -1,0 +1,345 @@
+{
+  "run_id": "20260329-eb69e83e",
+  "agent": "checklist_evaluator",
+  "schema_version": 1,
+  "ticker": "NVDA",
+  "report_date": "2026-03-29",
+  "current_price": 167.52,
+  "payload": {
+    "checklist": {
+      "A_financial_health": {
+        "score": 6.85,
+        "items": [
+          {
+            "id": "A1",
+            "label": "Revenue Growth (YoY)",
+            "value": 19.5,
+            "verdict": "caution",
+            "rationale": "Revenue growth YoY is 19.5%, which is in the 0–20% range.",
+            "sources": [
+              {
+                "type": "api",
+                "tool": "yfinance",
+                "title": "yfinance"
+              },
+              {
+                "type": "api",
+                "tool": "Financial Modeling Prep (FMP)",
+                "title": "Financial Modeling Prep (FMP)"
+              }
+            ]
+          },
+          {
+            "id": "A2",
+            "label": "Operating Margin",
+            "value": 65.0,
+            "verdict": "positive",
+            "rationale": "Operating margin is 65.0%, which is greater than 25%.",
+            "sources": [
+              {
+                "type": "api",
+                "tool": "yfinance",
+                "title": "yfinance"
+              },
+              {
+                "type": "api",
+                "tool": "Financial Modeling Prep (FMP)",
+                "title": "Financial Modeling Prep (FMP)"
+              }
+            ]
+          },
+          {
+            "id": "A3",
+            "label": "EPS vs. Consensus",
+            "value": "Data unavailable for value",
+            "verdict": "insufficient_data",
+            "rationale": "EPS consensus data is not available.",
+            "sources": []
+          },
+          {
+            "id": "A4",
+            "label": "Debt Ratio Trend",
+            "value": "Data unavailable for value",
+            "verdict": "insufficient_data",
+            "rationale": "Debt ratio trend data is not available.",
+            "sources": []
+          },
+          {
+            "id": "A5",
+            "label": "Free Cash Flow (FCF)",
+            "value": 34904000000.0,
+            "verdict": "positive",
+            "rationale": "Free cash flow is positive and growing.",
+            "sources": [
+              {
+                "type": "api",
+                "tool": "yfinance",
+                "title": "yfinance"
+              },
+              {
+                "type": "api",
+                "tool": "Financial Modeling Prep (FMP)",
+                "title": "Financial Modeling Prep (FMP)"
+              }
+            ]
+          }
+        ]
+      },
+      "B_valuation": {
+        "score": 6.7,
+        "items": [
+          {
+            "id": "B1",
+            "label": "P/E Ratio",
+            "value": 34.11813,
+            "verdict": "caution",
+            "rationale": "P/E ratio is 34.11813, which is a 21.85% premium over the sector average of 28.0. However, PEG is less than 1.0, preventing a negative verdict.",
+            "sources": [
+              {
+                "type": "api",
+                "tool": "yfinance",
+                "title": "yfinance"
+              },
+              {
+                "type": "api",
+                "tool": "Financial Modeling Prep (FMP)",
+                "title": "Financial Modeling Prep (FMP)"
+              }
+            ]
+          },
+          {
+            "id": "B2",
+            "label": "P/B Ratio",
+            "value": 25.883808,
+            "verdict": "negative",
+            "rationale": "P/B ratio is 25.883808, which is greater than 8x.",
+            "sources": [
+              {
+                "type": "api",
+                "tool": "yfinance",
+                "title": "yfinance"
+              },
+              {
+                "type": "api",
+                "tool": "Financial Modeling Prep (FMP)",
+                "title": "Financial Modeling Prep (FMP)"
+              }
+            ]
+          },
+          {
+            "id": "B3",
+            "label": "P/S Ratio",
+            "value": 18.85529,
+            "verdict": "negative",
+            "rationale": "P/S ratio is 18.85529, which is greater than 15x.",
+            "sources": [
+              {
+                "type": "api",
+                "tool": "yfinance",
+                "title": "yfinance"
+              },
+              {
+                "type": "api",
+                "tool": "Financial Modeling Prep (FMP)",
+                "title": "Financial Modeling Prep (FMP)"
+              }
+            ]
+          },
+          {
+            "id": "B4",
+            "label": "EV/EBITDA",
+            "value": 30.17,
+            "verdict": "negative",
+            "rationale": "EV/EBITDA is 30.17, which is greater than 25x.",
+            "sources": [
+              {
+                "type": "api",
+                "tool": "yfinance",
+                "title": "yfinance"
+              },
+              {
+                "type": "api",
+                "tool": "Financial Modeling Prep (FMP)",
+                "title": "Financial Modeling Prep (FMP)"
+              }
+            ]
+          },
+          {
+            "id": "B5",
+            "label": "PEG Ratio",
+            "value": 0.6891,
+            "verdict": "positive",
+            "rationale": "PEG ratio is 0.6891, which is less than 1.0.",
+            "sources": [
+              {
+                "type": "api",
+                "tool": "yfinance",
+                "title": "yfinance"
+              },
+              {
+                "type": "api",
+                "tool": "Financial Modeling Prep (FMP)",
+                "title": "Financial Modeling Prep (FMP)"
+              }
+            ]
+          },
+          {
+            "id": "B6",
+            "label": "Analyst Price Target",
+            "value": 268.22195,
+            "verdict": "positive",
+            "rationale": "Analyst mean target is 268.22195, which is more than 10% above the current price of 167.52.",
+            "sources": [
+              {
+                "type": "api",
+                "tool": "yfinance",
+                "title": "yfinance"
+              },
+              {
+                "type": "api",
+                "tool": "Financial Modeling Prep (FMP)",
+                "title": "Financial Modeling Prep (FMP)"
+              }
+            ]
+          }
+        ]
+      },
+      "C_catalysts": {
+        "score": 2.0,
+        "items": [
+          {
+            "id": "C1",
+            "label": "Recent Earnings Surprise",
+            "value": "Data unavailable for value",
+            "verdict": "insufficient_data",
+            "rationale": "Recent earnings surprise data is not available.",
+            "sources": []
+          },
+          {
+            "id": "C2",
+            "label": "Insider Trading Activity",
+            "value": "Data unavailable for value",
+            "verdict": "insufficient_data",
+            "rationale": "Insider trading activity data is not available.",
+            "sources": []
+          },
+          {
+            "id": "C3",
+            "label": "Regulatory / Geo Risk",
+            "value": "low",
+            "verdict": "positive",
+            "rationale": "Top risk factors indicate low severity.",
+            "sources": [
+              {
+                "type": "sec",
+                "tool": "SEC EDGAR",
+                "title": "SEC EDGAR"
+              }
+            ]
+          }
+        ]
+      },
+      "D_industry": {
+        "score": 8.5,
+        "items": [
+          {
+            "id": "D1",
+            "label": "Market Position / Share",
+            "value": "strong",
+            "verdict": "positive",
+            "rationale": "NVIDIA has a strong market position with a high operating margin compared to peers.",
+            "sources": [
+              {
+                "type": "api",
+                "tool": "yfinance",
+                "title": "yfinance"
+              }
+            ]
+          },
+          {
+            "id": "D2",
+            "label": "Competitive Pressure",
+            "value": "low",
+            "verdict": "positive",
+            "rationale": "NVIDIA's operating margin and revenue growth are superior to most peers.",
+            "sources": [
+              {
+                "type": "api",
+                "tool": "yfinance",
+                "title": "yfinance"
+              }
+            ]
+          },
+          {
+            "id": "D3",
+            "label": "Sector Tailwind / Headwind",
+            "value": "tailwind",
+            "verdict": "positive",
+            "rationale": "The technology sector is experiencing a tailwind.",
+            "sources": [
+              {
+                "type": "api",
+                "tool": "yfinance",
+                "title": "yfinance"
+              }
+            ]
+          }
+        ]
+      },
+      "E_sentiment": {
+        "score": 2.0,
+        "items": [
+          {
+            "id": "E1",
+            "label": "7-Day News Sentiment",
+            "value": 20.0,
+            "verdict": "negative",
+            "rationale": "Positive news sentiment is 20.0%, which is less than 45%.",
+            "sources": [
+              {
+                "type": "news",
+                "tool": "tavily",
+                "title": "tavily"
+              }
+            ]
+          },
+          {
+            "id": "E2",
+            "label": "Analyst Rating Changes (30d)",
+            "value": 0,
+            "verdict": "caution",
+            "rationale": "Net analyst rating changes are zero.",
+            "sources": [
+              {
+                "type": "news",
+                "tool": "tavily",
+                "title": "tavily"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    "summary": {
+      "A_score": 6.85,
+      "B_score": 6.7,
+      "C_score": 2.0,
+      "D_score": 8.5,
+      "E_score": 2.0,
+      "composite_score": 6.065,
+      "investment_rating": "MODERATE BUY",
+      "target_price": 268.22195,
+      "current_price": 167.52,
+      "upside_pct": 60.1,
+      "key_strengths": [
+        "Strong operating margin",
+        "Positive PEG ratio",
+        "Analyst target significantly above current price"
+      ],
+      "key_risks": [
+        "High P/B and P/S ratios",
+        "Negative news sentiment"
+      ]
+    }
+  }
+}
